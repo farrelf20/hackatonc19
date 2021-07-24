@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CovidController;
+use App\Http\Controllers\RujukanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', [HomeController::class, 'index']);
+Route::get('api/covid', [CovidController::class, 'index']);
+Route::get('api/rujukan', [RujukanController::class, 'index']);
