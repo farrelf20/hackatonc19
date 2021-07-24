@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CovidController;
 use App\Http\Controllers\RujukanController;
+use App\Http\Controllers\VaksinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,6 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('api/covid', [CovidController::class, 'index']);
 Route::get('api/rujukan', [RujukanController::class, 'index']);
+Route::get('/vaksin', [VaksinController::class, 'index']);
+Route::get('vaksin/form', [VaksinController::class, 'create']);
+Route::post('submit', [VaksinController::class, 'create']);
